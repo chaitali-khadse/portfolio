@@ -603,3 +603,61 @@ footer {
         margin-top: 20px;
     }
 }
+/* Base styles (for desktop and larger screens) */
+body {
+    font-size: 16px;
+}
+
+header {
+    height: 100vh; /* Full screen height */
+    background-size: cover;
+    background-position: center;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .about-image img {
+        width: 100%; /* Make the image full-width on smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .about-image img {
+        width: 100%;
+    }
+
+    /* Reduce padding for cards */
+    .skills-card {
+        padding: 10px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
