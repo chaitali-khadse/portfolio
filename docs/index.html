@@ -558,7 +558,24 @@
         setInterval(updateDateTime, 1000); // Update the date and time every second
         updateDateTime(); // Initial call to set the date and time immediately when the page loads
     </script>
+    <script>
+        // Check if a visit counter already exists in local storage
+        if (localStorage.getItem('visitCount')) {
+            // Increment the visit count
+            let visitCount = parseInt(localStorage.getItem('visitCount'), 10);
+            visitCount++;
+            localStorage.setItem('visitCount', visitCount);
+        } else {
+            // If no counter exists, initialize it
+            localStorage.setItem('visitCount', 1);
+        }
     
+        // Display the visit count
+        document.addEventListener("DOMContentLoaded", function() {
+            let visitCount = localStorage.getItem('visitCount');
+            document.getElementById('visit-counter').innerText = "People Visited this website " + visitCount + " times.";
+        });
+    </script>
     <script>
         window.location.href = "https://chaitalikhadse.com";
     </script>
