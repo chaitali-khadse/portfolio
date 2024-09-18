@@ -12,7 +12,10 @@ body {
     margin: 0;
     padding: 0;
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    max-width: 100vw; /* Prevent overflow */
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
+
 #date-time {
     position: fixed;
     top: 10px;
@@ -236,7 +239,6 @@ nav {
 }
 
 /* Education Section */
-/* Education Section */
 #education {
     padding: 60px 0;
     background-color: #0e0233;
@@ -291,9 +293,8 @@ nav {
     font-weight: bold;
     text-align: center;
     color: #0a0000;
-    
-    
 }
+
 .custom-year-color {
     color: #ff5733; /* Replace #ff5733 with your desired color */
 }
@@ -303,8 +304,8 @@ nav {
     text-align: center;
     margin-bottom: 10px;
     color: #0a0000;
-    
 }
+
 .university-name {
     font-weight: bold; /* Make the text bold */
     color: #080000;
@@ -314,7 +315,6 @@ nav {
     font-size: 16px;
     color: #010509;
     text-align: center;
-    
 }
 
 #education .education-icon {
@@ -328,7 +328,6 @@ nav {
     background: linear-gradient(135deg, #e3e3e9, #797a82); /* Gradient background */
     color: #fff; /* White text for better contrast */
 }
-
 
 #certifications h2 {
     font-size: 36px;
@@ -376,20 +375,6 @@ nav {
     color: #090909 !important;
 }
 
-/* Background Text */
-.background-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 150px;
-    color: rgba(255, 255, 255, 0.05); /* Light background text */
-    z-index: -1;
-    font-weight: bold;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-/*Expereicne Section*/
 /* Experience Section */
 #experience {
     padding: 60px 0;
@@ -475,9 +460,6 @@ nav {
     border-color: #004085;
 }
 
-
-/* Projects Section */
-/* Projects Section */
 /* Projects Section */
 #projects {
     padding: 60px 0;
@@ -601,5 +583,72 @@ footer {
     .about-details {
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    .about-image {
+        width: 150px; /* Adjust size for smaller screens */
+        height: 150px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .about-details h2 {
+        font-size: 24px; /* Reduce the font size for smaller screens */
+    }
+
+    .about-details p, .about-details ul li {
+        font-size: 18px; /* Adjust text size for better readability */
+    }
+
+    nav {
+        display: block; /* Make navigation block-level for mobile */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center items */
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nav-list li a {
+        font-size: 14px; /* Reduce the font size for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 32px; /* Reduce font size for headers */
+    }
+
+    .hero-content h3 {
+        font-size: 18px; /* Reduce the tagline size */
+    }
+
+    .hero-content {
+        padding-top: 20px;
+        margin-top: 0; /* Adjust the margin on mobile */
+    }
+
+    .skills-card, .project-card, .experience-card {
+        width: 100%; /* Make the card fill the width on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .skills-card h4, .project-card h4, .experience-card h5 {
+        font-size: 18px; /* Reduce font size for headings */
+    }
+
+    .skills-card p, .project-card p, .experience-card ul li {
+        font-size: 14px; /* Adjust the text size */
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
     }
 }
