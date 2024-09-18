@@ -111,35 +111,24 @@ nav {
     color: #fbfeff;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+@media (max-width: 767px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .about-details {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
 
-.about-image {
-    flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 280px; /* Adjust the width to your preference */
-    height: 280px; /* Adjust the height to create the oval shape */
-    overflow: hidden; /* Ensures that the image fits within the container */
-    border-radius: 50%; /* Rounds the image to create the oval shape */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    object-fit: cover; /* Ensures the image covers the entire oval */
-}
-
-.about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire oval */
-}
-
-
-.about-details {
-    flex: 1;
-    margin-left: 40px;
-}
 
 .about-details h2 {
     font-size: 36px;
