@@ -13,7 +13,6 @@ body {
     padding: 0;
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
 }
-
 #date-time {
     position: fixed;
     top: 10px;
@@ -39,6 +38,7 @@ header, section, footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 10px;
     color: #477691;
 }
 
@@ -49,10 +49,9 @@ header, section, footer {
     font-family: 'Lobster', cursive;
 }
 .hero-content {
-    padding-top: 10px;
-    margin-top: -90px;
+    padding-top: 10px; /* Decrease this value */
+    margin-top: -90px; /* Optionally add a negative margin */
 }
-
 .hero-content p {
     font-size: 48px;
     margin: 50px 0;
@@ -79,8 +78,7 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    position: relative; /* Set relative positioning to position the logo correctly */
 }
 
 .nav-list li {
@@ -100,6 +98,12 @@ nav {
     color: #ffa726;
 }
 
+.nav-list li img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 15px; /* Spacing between logo and navigation links */
+}
+
+
 /* About Section */
 #about {
     padding: 60px 0;
@@ -109,81 +113,296 @@ nav {
 
 .about-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .about-image {
-    width: 280px;
-    height: 280px;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 280px; /* Adjust the width to your preference */
+    height: 280px; /* Adjust the height to create the oval shape */
+    overflow: hidden; /* Ensures that the image fits within the container */
+    border-radius: 50%; /* Rounds the image to create the oval shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    object-fit: cover; /* Ensures the image covers the entire oval */
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image covers the entire oval */
+}
+
+
+.about-details {
+    flex: 1;
+    margin-left: 40px;
 }
 
 .about-details h2 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: #f2f3f5;
     text-transform: uppercase;
+}
+
+.about-details p, .about-details ul li {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ebeef1;
 }
 
 .about-details ul {
     list-style: none;
-    padding: 0;
 }
 
-.about-details ul li {
-    margin-bottom: 20px;
-    font-size: 22px;
+.about-details ul li strong {
+    color: #e2b971;
+}
+
+.about-details ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+.about-details ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Skills Section */
 #skills {
     padding: 60px 0;
-    background: linear-gradient(135deg, #e3e3e9, #797a82);
+    background: linear-gradient(135deg, #e3e3e9, #797a82); /* Gradient background */
+    color: #fff; /* White text for better contrast */
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #160303; /* White heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .skills-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for cards */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .skills-card h4 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #0c0a0a; /* White text */
+    display: flex;
+    align-items: center;
 }
 
+.skills-card h4 .icon {
+    margin-right: 10px;
+    font-size: 24px; /* Font Awesome icon size */
+    color: #090908; /* Accent color for icons */
+}
+
+.skills-card p {
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #022242; /* Light text for contrast */
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: rgba(9, 0, 0, 0); /* Subtle background text */
+    z-index: -1;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Education Section */
 /* Education Section */
 #education {
     padding: 60px 0;
     background-color: #0e0233;
     color: #fff;
+    position: relative;
 }
 
-.education-card {
+#education .background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    color: rgba(17, 1, 1, 0.1);
+    z-index: -1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#education h2 {
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#education p {
+    font-size: 16px;
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#education .education-card {
     background-color: #bdcdde;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#education .education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#education .education-card h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #0a0000;
+    
+    
+}
+.custom-year-color {
+    color: #ff5733; /* Replace #ff5733 with your desired color */
+}
+
+#education .education-card h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0a0000;
+    
+}
+.university-name {
+    font-weight: bold; /* Make the text bold */
+    color: #080000;
+}
+
+#education .education-card p {
+    font-size: 16px;
+    color: #010509;
+    text-align: center;
+    
+}
+
+#education .education-icon {
+    font-size: 48px;
     text-align: center;
 }
 
+/* Certificates Section */
+#certifications {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #e3e3e9, #797a82); /* Gradient background */
+    color: #fff; /* White text for better contrast */
+}
+
+
+#certifications h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.certificate-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0a0000;
+}
+
+.certificate-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #040000;
+}
+
+.certificate-card .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.text-primary {
+    color: #03263e !important;
+}
+
+.text-muted {
+    color: #090909 !important;
+}
+
+/* Background Text */
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.05); /* Light background text */
+    z-index: -1;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+/*Expereicne Section*/
 /* Experience Section */
 #experience {
     padding: 60px 0;
     background-color: #0e0233;
+}
+
+#experience h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .experience-card {
@@ -191,14 +410,137 @@ nav {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-icon {
+    margin-bottom: 15px;
+}
+
+.experience-card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
     text-align: center;
 }
 
+.experience-card h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.experience-card .text-muted {
+    color: #6c757d;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.experience-card ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.experience-card ul li::before {
+    content: "\f058"; /* Font Awesome check-circle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    color: #28a745; /* Green color for the icon */
+}
+
+.text-center .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.text-center .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+/* Projects Section */
+/* Projects Section */
 /* Projects Section */
 #projects {
     padding: 60px 0;
-    background: linear-gradient(135deg, #e3e3e9, #797a82);
+    background: linear-gradient(135deg, #e3e3e9, #797a82); /* Gradient background */
+    color: #0a0101;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #040404;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-align: center;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure all cards are of equal height */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #080808;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #080808;
+}
+
+.project-card .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.view-dashboard {
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.view-dashboard .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.view-dashboard .btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
 }
 
 /* Contact Section */
@@ -207,6 +549,11 @@ nav {
     background-color: #0e0233;
     color: #fdfdfd;
     text-align: center;
+}
+
+#contact p {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 #contact a {
@@ -225,62 +572,34 @@ footer {
     padding: 20px 0;
     background-color: #333;
     color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Background Text */
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 /* Responsive Design */
-/* For tablets */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
+@media (max-width: 767.98px) {
     .about-content {
         flex-direction: column;
+        text-align: center;
     }
 
     .about-details {
+        margin-left: 0;
         margin-top: 20px;
     }
-
-    .skills-card {
-        margin-bottom: 20px;
-    }
-}
-
-/* For mobile phones */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .about-image img {
-        width: 100%;
-    }
-
-    .skills-card {
-        padding: 10px;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
