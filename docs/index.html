@@ -8,49 +8,50 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <div id="date-time" class="text-right text-white"></div>
+
 </head>
 
 <body>
-    <header id="header" class="text-center">
+    <header id="header">
         <div id="date-time" class="text-right text-white"></div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Chaitali Khadse</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <nav>
+            <ul class="nav-list d-flex align-items-center justify-content-center">
+                
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certification</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
         <div class="hero-content">
             <h1>Hi!</h1>
             <h1>I am <span class="highlight">Chaitali Khadse</span></h1>
-            <h3 class="mb-5">Project Manager | Scrum Enthusiast | Data Analyst | Business Analyst | Sales and Data Operations | Portfolio Management</h3>
+            <h1><span class="highlight"></span></h1>
+            <h3 style="padding-bottom: 90px;">Project Manager | Scrum Enthusiast | Data Analyst | Business Analyst | Sales and Data Operations | Portfolio Management</h3>
+
         </div>
     </header>
+    
+    
 
-    <section id="about" class="py-5">
+    <section id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <div class="about-image">
-                        <img src="image.png" alt="Chaitali Khadse" class="img-fluid rounded-circle" loading="lazy">
-                    </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="image.png" alt="Chaitali Khadse" loading="lazy">
                 </div>
-                <div class="col-lg-8">
+                
+                
+                
+                <div class="about-details">
                     <h2>About Me</h2>
                     <p>Passionate Project Manager and Scrum Enthusiast with a knack for turning ideas into actionable plans. Eager to leverage data analytics to drive impactful results.</p>
-                    <ul class="list-unstyled">
+                    <ul>
                         <li><strong>Name:</strong> Chaitali Khadse</li>
                         <li><strong>Date of birth:</strong> January 29, 1993</li>
                         <li><strong>Address:</strong> Raleigh, NC USA</li>
@@ -62,15 +63,23 @@
             </div>
         </div>
     </section>
-
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
+    
+    <section id="skills" class="py-5 position-relative">
+        <div class="container position-relative">
             <h2 class="text-center mb-4">Skills & Professional Affiliations</h2>
             <p class="text-center mb-5">An overview of my technical proficiencies and professional memberships</p>
+    
+            <!-- Background text -->
+            <div class="background-text position-absolute w-100 h-100 d-flex justify-content-center align-items-center" style="top: 0; left: 0; z-index: -1;">
+                <span style="font-size: 200px; color: rgba(232, 34, 34, 0.1); text-transform: uppercase;">Skills</span>
+            </div>
+    
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="skills-card p-4 bg-white shadow-sm">
-                        <h4 class="mb-2"><i class="fas fa-check-circle icon text-success"></i> Data Analysis Tools</h4>
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-check-circle icon" style="color: #28a745;"></i> Data Analysis Tools
+                        </h4>
                         <p><i class="fas fa-check"></i> Tableau</p>
                         <p><i class="fas fa-check"></i> Power BI</p>
                         <p><i class="fas fa-check"></i> SQL</p>
@@ -79,129 +88,450 @@
                         <p><i class="fas fa-check"></i> Google Sheets</p>
                     </div>
                 </div>
+    
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="skills-card p-4 bg-white shadow-sm">
-                        <h4 class="mb-2"><i class="fas fa-tasks icon text-warning"></i> Productivity Tools</h4>
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-tasks icon" style="color: #e48c08;"></i> Productivity Tools
+                        </h4>
                         <p><i class="fas fa-check"></i> Microsoft Office Suite</p>
                         <p><i class="fas fa-check"></i> PowerPoint</p>
                         <p><i class="fas fa-check"></i> Asana</p>
+                        <p><i class="fas fa-check"></i> Microsoft Office</p>
                         <p><i class="fas fa-check"></i> JIRA</p>
                         <p><i class="fas fa-check"></i> MS Project</p>
                         <p><i class="fas fa-check"></i> Agile/Scrum</p>
                     </div>
                 </div>
+    
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="skills-card p-4 bg-white shadow-sm">
-                        <h4 class="mb-2"><i class="fas fa-lightbulb icon text-warning"></i> Soft Skills</h4>
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-lightbulb icon" style="color: #e48c08;"></i> Soft Skills
+                        </h4>
                         <p><i class="fas fa-check"></i> Communication</p>
                         <p><i class="fas fa-check"></i> Problem Solving</p>
+                        <p><i class="fas fa-check"></i> Change Management</p>
                         <p><i class="fas fa-check"></i> Leadership and Motivation</p>
                         <p><i class="fas fa-check"></i> Team Work</p>
+                        <p><i class="fas fa-check"></i> Adaptability</p>
+                        <p><i class="fas fa-check"></i> Agile/Scrum</p>
+                        <p><i class="fas fa-check"></i> Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-code icon" style="color: #2196f3;"></i> Programming Languages
+                        </h4>
+                        <p><i class="fas fa-check"></i> Python</p>
+                        <p><i class="fas fa-check"></i> HTML</p>
+                        <p><i class="fas fa-check"></i> CSS</p>
+                        <p><i class="fas fa-check"></i> JavaScript</p>
+                        <p><i class="fas fa-check"></i> R</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-cubes icon" style="color: #9c27b0;"></i> Frameworks and Libraries
+                        </h4>
+                        <p><i class="fas fa-check"></i> NPM</p>
+                        <p><i class="fas fa-check"></i> Matplotlib</p>
+                        <p><i class="fas fa-check"></i> NumPy</p>
+                        <p><i class="fas fa-check"></i> Pandas</p>
+                        <p><i class="fas fa-check"></i> Flask</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-briefcase icon" style="color: #358f38;"></i> Business Analysis Skills
+                        </h4>
+                        <p><i class="fas fa-check"></i> Data Specifications</p>
+                        <p><i class="fas fa-check"></i> Data Integration</p>
+                        <p><i class="fas fa-check"></i> Quality Control (QA/QC)</p>
+                        <p><i class="fas fa-check"></i> Stakeholder Engagement</p>
+                        <p><i class="fas fa-check"></i> Data Manipulation</p>
+                        <p><i class="fas fa-check"></i> Data Mining</p>
+                        <p><i class="fas fa-check"></i> MS Access</p>
+                        <p><i class="fas fa-check"></i> Problem-Solving</p>
+                        <p><i class="fas fa-check"></i> Written and Verbal Communication</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="skills-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-users icon" style="color: #540720;"></i> Professional Affiliations
+                        </h4>
+                        <p><i class="fas fa-check"></i> Member of IEEE</p>
+                        <p><i class="fas fa-check"></i> Member of Scrum Alliance</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
+    
 
     <section id="education" class="py-5">
-        <div class="container">
+        <div class="container position-relative">
             <h2 class="text-center mb-4">Education</h2>
+            <p class="text-center mb-5">Here is an overview of my educational background and academic achievements</p>
+    
+            <!-- Background text -->
+            <div class="background-text">Education</div>
+    
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="education-card p-4 bg-light shadow-sm text-center">
-                        <h4 class="text-primary">2023-2024</h4>
+                    <div class="education-card p-4">
+                        <div class="education-icon mb-3">
+                            <i class="fas fa-graduation-cap" style="color: #007bff;"></i>
+                        </div>
+                        <h4 class="text-primary mb-2">2023-2024</h4>
                         <h5>Master of Science in Information Technology and Management</h5>
-                        <p class="text-muted">University of North Carolina at Greensboro</p>
+                        <p class="university-name text-muted">University of North Carolina at Greensboro</p>
                         <p>An advanced program focusing on information technology and management techniques.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="education-card p-4 bg-light shadow-sm text-center">
-                        <h4 class="text-warning">2016-2018</h4>
+                    <div class="education-card p-4">
+                        <div class="education-icon mb-3">
+                            <i class="fas fa-university" style="color: #644e0b;"></i>
+                        </div>
+                        <h4 class="custom-year-color mb-2">2016-2018</h4>
                         <h5>Masters of Management Studies (MBA)</h5>
-                        <p class="text-muted">University of Mumbai</p>
+                        <p class="university-name text-muted">University of Mumbai</p>
                         <p>A comprehensive management program covering various business disciplines.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="education-card p-4 bg-light shadow-sm text-center">
-                        <h4 class="text-success">2011-2015</h4>
+                    <div class="education-card p-4">
+                        <div class="education-icon mb-3">
+                            <i class="fas fa-cogs" style="color: #28a745;"></i>
+                        </div>
+                        <h4 class="text-success mb-2">2011-2015</h4>
                         <h5>Bachelor of Engineering in Electronics and Telecommunications</h5>
-                        <p class="text-muted">KBC North Maharashtra University</p>
+                        <p class="university-name text-muted">KBC North Maharashtra University</p>
                         <p>An engineering program focusing on electronics and telecommunication systems.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="certifications" class="py-5 bg-light">
-        <div class="container">
+    
+    
+    
+    
+    <section id="certifications" class="py-5">
+        <div class="container position-relative">
             <h2 class="text-center mb-5">Certifications</h2>
+            
+            <!-- Background text -->
+            <div class="background-text">Certifications</div>
+            
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="certificate-card p-4 bg-white shadow-sm">
-                        <h4><i class="fas fa-certificate text-success"></i> Diploma Certificate in Data Science for Business</h4>
-                        <p><i class="fas fa-university text-danger"></i> Harvard University-Business School Online</p>
-                        <p class="text-muted"><i class="fas fa-calendar-alt text-primary"></i> May 2024</p>
-                        <a href="data.png" class="text-primary" target="_blank"><i class="fas fa-eye"></i> View Certificate</a>
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Diploma Certificate in Data Science for Business
+                        </h4>
+                        <p><i class="fas fa-university" style="color: #c0392b;"></i> Harvard University-Business School Online, Boston, MA</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> May 2024</span>
+                        <div class="mt-2">
+                            <a href="data.png" target="_blank" class="text-primary">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- Add other certification cards here following the same structure -->
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Post-Baccalaureate Certificate in Supply Chain Analytics
+                        </h4>
+                        <p><i class="fas fa-university" style="color: #9b59b6;"></i> University of North Carolina at Greensboro, North Carolina</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> Dec 2024</span>
+                        <div class="mt-2">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Certified Scrum Master
+                        </h4>
+                        <p><i class="fas fa-building" style="color: #f39c12;"></i> Scrum Alliance</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> Aug 2024</span>
+                        <div class="mt-2">
+                            <a href="scrum.png" target="_blank" class="text-primary">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Certified in foundations of Project Management - Google
+                        </h4>
+                        <p><i class="fab fa-google" style="color: #db4437;"></i> Google</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> June 2024</span>
+                        <div class="mt-2">
+                            <a href="pm.png" target="_blank" class="text-primary">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Certified in Leveraging Generative AI for Project Management
+                        </h4>
+                        <p><i class="fab fa-linkedin" style="color: #0077b5;"></i> LinkedIn</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> June 2024</span>
+                        <div class="mt-2">
+                            <a href="aipm.png" target="_blank" class="text-primary">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Certified in AI Driven Project Management
+                        </h4>
+                        <p><i class="fab fa-linkedin" style="color: #0077b5;"></i> LinkedIn</p>
+                        <span class="text-muted"><i class="fas fa-calendar-alt" style="color: #3498db;"></i> June 2024</span>
+                        <div class="mt-2">
+                            <a href="aipmi.png" target="_blank" class="text-primary">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 mb-4">
+                    <div class="certificate-card p-4">
+                        <h4 class="mb-2">
+                            <i class="fas fa-certificate icon" style="color: #28a745;"></i> Other Certifications
+                        </h4>
+                        <p><i class="fas fa-building" style="color: #1abc9c;"></i> Trello, Business Analytics Foundation, Smartsheet Training, National Institute for Securities Management India</p>
+                        <div class="mt-2">
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </section>
-
+    
+    
+    
+    
+    
+    
     <section id="experience" class="py-5">
-        <div class="container">
+        <div class="container position-relative">
             <h2 class="text-center mb-5">Professional Experience</h2>
+            
+    
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="experience-card p-4 bg-light shadow-sm">
-                        <h5 class="text-center">Graduate Assistant (Data Science)</h5>
-                        <h6 class="text-center text-muted">University Of North Carolina At Greensboro</h6>
-                        <p class="text-muted text-center"><i class="fas fa-calendar-alt"></i> Nov 2023 - Present</p>
-                        <ul class="list-unstyled">
+                    <div class="experience-card p-4">
+                        <div class="experience-icon mb-3 text-center">
+                            <i class="fas fa-briefcase fa-2x" style="color: #007bff;"></i>
+                        </div>
+                        <h5 class="mb-1 text-center">Graduate Assistant (Data Science)</h5>
+                        <h6 class="text-center font-weight-bold">University Of North Carolina At Greensboro</h6>
+                        <span class="text-muted d-block text-center"><i class="fas fa-calendar-alt"></i> Nov 2023 - Present</span>
+                        <ul class="mt-3">
+                            <li>Assistant to Sarah Daynes, Graduate School fellow of UCNG</li>
                             <li>Managed and coordinated data from various sources</li>
-                            <li>Spearheaded research data collection and analysis</li>
-                            <li>Created digital marketing materials</li>
+                            <li>Spearheaded research data collection and analysis, leading to the creation of digital marketing materials</li>
+                            <li>Collaborated with cross-functional teams to drive data analysis and discovery processes</li>
+                            <li>Managing Social Media Page for the School</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Add other experience cards here following the same structure -->
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Projects</h2>
-            <div class="row">
+    
                 <div class="col-lg-6 mb-4">
-                    <div class="project-card p-4 bg-white shadow-sm h-100">
-                        <h4><i class="fas fa-chart-pie text-info"></i> Data Visualizations through Tableau and Power BI</h4>
-                        <p>Created comprehensive analysis dashboards visualizing the impact of the recession and COVID-19 on the US real estate and economy.</p>
-                        <p><strong>Technologies Used:</strong> Tableau, SQL, Power BI</p>
+                    <div class="experience-card p-4">
+                        <div class="experience-icon mb-3 text-center">
+                            <i class="fas fa-handshake fa-2x" style="color: #28a745;"></i>
+                        </div>
+                        <h5 class="mb-1 text-center">Financial Advisor</h5>
+                        <h6 class="text-center font-weight-bold">Jalgaon Jamod Urban Nidhi Limited Bank, India</h6>
+                        <span class="text-muted d-block text-center"><i class="fas fa-calendar-alt"></i> Dec 2020 - May 2022</span>
+                        <ul class="mt-3">
+                            <li>Provided strategic advice on multi-faceted aspects like policies and business initiatives, increasing the bank's assets from ₹1 to ₹30 crore</li>
+                            <li>Led financial literacy workshops, increasing customer base by 500% over two years</li>
+                            <li>Collaborated with the board to investigate and develop innovative financial services tailored to support community needs as per business strategy</li>
+                        </ul>
                     </div>
                 </div>
-                <!-- Add other project cards here following the same structure -->
+    
+                <div class="col-lg-6 mb-4">
+                    <div class="experience-card p-4">
+                        <div class="experience-icon mb-3 text-center">
+                            <i class="fas fa-chart-line fa-2x" style="color: #ffc107;"></i>
+                        </div>
+                        <h5 class="mb-1 text-center">Assistant Manager (Finance Data Operations, Sales Operations)</h5>
+                        <h6 class="text-center font-weight-bold">ICICI Securities Ltd, India</h6>
+                        <span class="text-muted d-block text-center"><i class="fas fa-calendar-alt"></i> July 2018 - Nov 2021</span>
+                        <ul class="mt-3">
+                            <li>Directed data-driven decision-making, increasing revenue by 20% through comprehensive MIS reports and dashboards</li>
+                            <li>Established compliance audit processes, enhancing investor trust and confidence</li>
+                            <li>Integrated SQL queries and advanced data analysis tools, improving operational efficiency by 40%</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 mb-4">
+                    <div class="experience-card p-4">
+                        <div class="experience-icon mb-3 text-center">
+                            <i class="fas fa-chalkboard-teacher fa-2x" style="color: #dc3545;"></i>
+                        </div>
+                        <h5 class="mb-1 text-center">Trainer (Data Science)</h5>
+                        <h6 class="text-center font-weight-bold">Synonyms Training Solutions LLP, India</h6>
+                        <span class="text-muted d-block text-center"><i class="fas fa-calendar-alt"></i> Jan 2017 - Jun 2018</span>
+                        <ul class="mt-3">
+                            <li>Designed and developed Direct to consumer (DTC) data science training programs as products, increasing trainee engagement and retention by 30%</li>
+                            <li>Handled responsibilities like teaching data science courses, improving trainees' data analysis skills by 40%</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 mb-4">
+                    <div class="experience-card p-4">
+                        <div class="experience-icon mb-3 text-center">
+                            <i class="fas fa-database fa-2x" style="color: #17a2b8;"></i>
+                        </div>
+                        <h5 class="mb-1 text-center">Technical Data Analyst</h5>
+                        <h6 class="text-center font-weight-bold">Bizinfosec LLP, India</h6>
+                        <span class="text-muted d-block text-center"><i class="fas fa-calendar-alt"></i> Jan 2016 - May 2016</span>
+                        <ul class="mt-3">
+                            <li>Collaborated with development teams to optimize data management processes</li>
+                            <li>Implemented AGILE processes, improving project delivery timelines by 25%</li>
+                            <li>Conducted bug triage processes, reducing system errors and improving software reliability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+          
+        </div>
+    </section>
+    
+    
+    <section id="projects" class="py-5">
+        <div class="container position-relative">
+            <h2 class="text-center mb-5">Projects</h2>
+    
+            <!-- Background text -->
+            <div class="background-text">Projects</div>
+    
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card p-4 h-100">
+                        <h4 class="mb-2">
+                            <i class="fas fa-chart-pie icon" style="color: #1f77b4;"></i> Data Visualizations through Tableau and Power BI
+                        </h4>
+                        <p>Conducted data analytics comprehensive analysis dashboard with effective visuals exhibiting the impact of recession and COVID-19 on the US real estate and economy.</p>
+                        <p><strong>Technologies Used:</strong> Tableau, SQL, Tableau Prep, Power BI</p>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card p-4 h-100">
+                        <h4 class="mb-2">
+                            <i class="fas fa-film icon" style="color: #ff7f0e;"></i> Navigating Netflix's Content Evolution and Viewer Preferences
+                        </h4>
+                        <p>Data Exploration and strategic analysis of dataset on the content and trends interpreting viewer preferences using Python Source Code.</p>
+                        <p><strong>Technologies Used:</strong> Tableau, SQL, Tableau Prep, Power BI</p>
+                        <div class="view-dashboard">
+                            <a href="netflix.png" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> View Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card p-4 h-100">
+                        <h4 class="mb-2">
+                            <i class="fas fa-store icon" style="color: #2ca02c;"></i> Walmart Sales Data Analysis with MySQL
+                        </h4>
+                        <p>This project involved analyzing Walmart's sales data to uncover trends and insights that could enhance business strategies. By combining the power of Excel for data visualization and MySQL for advanced data querying, I was able to present a comprehensive analysis of sales patterns and performance metrics</p>
+                        <p><strong>Technologies Used:</strong> MySQL, Power BI</p>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card p-4 h-100">
+                        <h4 class="mb-2">
+                            <i class="fas fa-home icon" style="color: #d62728;"></i> Housing Price Prediction Model
+                        </h4>
+                        <p>Cleaned and preprocessed the data by handling missing values, encoding categorical variables, and applying logarithmic transformations to normalize skewed distributions, conducting EDA (Exploratory Data Analysis)</p>
+                        <p><strong>Technologies & Libraries Used:</strong> Python (Pandas, Matplotlib, Seaborn, NumPy, Plotly, GeoPandas, Dash)</p>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="project-card p-4 h-100">
+                        <h4 class="mb-2">
+                            <i class="fas fa-chart-line icon" style="color: #9467bd;"></i> Navigating Economic Turbulence: Real Estate & Economic Indicators Amidst the Great Recession & Covid-19
+                        </h4>
+                        <p>Developed an interactive data analysis dashboard using Python's Dash framework to analyze and visualize real estate and economic indicators across different states in the USA. The project aimed to understand the impact of significant economic events, such as the Great Recession and the COVID-19 pandemic, on real estate markets and broader economic factors.</p>
+                        <p><strong>Technologies & Libraries Used:</strong> Python (Dash, Plotly, Pandas, NumPy, Seaborn, Matplotlib)</p>
+                        <div class="view-dashboard">
+                            <a href="python.png" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> View Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+    
+    
 
-    <section id="contact" class="py-5">
-        <div class="container text-center">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:chaitali.khadse@ieee.org">chaitali.khadse@ieee.org</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/chaitalikhadse/" target="_blank">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/chaitali-khadse" target="_blank">GitHub Profile</a></p>
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact</h2>
+            <p class="text-center">Feel free to reach out to me at:</p>
+            <p class="text-center">Email: <a href="mailto:chaitali.khadse@ieee.org">chaitali.khadse@ieee.org</a></p>
+            <p class="text-center">LinkedIn: <a href="https://www.linkedin.com/in/chaitalikhadse/" target="_blank">LinkedIn Profile</a></p>
+            <p class="text-center">GitHub: <a href="https://github.com/chaitali-khadse" target="_blank">GitHub Profile</a></p>
+            <div id="visit-counter" style="text-align: center; margin-top: 20px; color: white;"></div>
+
         </div>
     </section>
 
-    <footer class="text-center bg-dark text-white py-3">
+    <footer>
         <p>&copy; 2024 Chaitali Khadse. All rights reserved.</p>
+        
     </footer>
-
     <script>
         function updateDateTime() {
             const now = new Date();
@@ -218,24 +548,37 @@
             document.getElementById('date-time').textContent = dateTimeString;
         }
     
-        setInterval(updateDateTime, 1000);
-        updateDateTime();
+        setInterval(updateDateTime, 1000); // Update the date and time every second
+        updateDateTime(); // Initial call to set the date and time immediately when the page loads
     </script>
-
     <script>
-        // Visit counter
+        // Check if a visit counter already exists in local storage
         if (localStorage.getItem('visitCount')) {
+            // Increment the visit count
             let visitCount = parseInt(localStorage.getItem('visitCount'), 10);
             visitCount++;
             localStorage.setItem('visitCount', visitCount);
         } else {
+            // If no counter exists, initialize it
             localStorage.setItem('visitCount', 1);
         }
-
+    
+        // Display the visit count
         document.addEventListener("DOMContentLoaded", function() {
             let visitCount = localStorage.getItem('visitCount');
             document.getElementById('visit-counter').innerText = "People Visited this website " + visitCount + " times.";
         });
     </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-395S6TD5GG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-395S6TD5GG');
+</script>
+
+    
 </body>
 </html>
