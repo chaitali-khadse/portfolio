@@ -192,38 +192,37 @@ nav {
 }
 
 .skills-card {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for cards */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-}
-
-.skills-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .skills-card h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #0c0a0a; /* White text */
-    display: flex;
-    align-items: center;
+    font-size: 1.25em;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
-.skills-card h4 .icon {
-    margin-right: 10px;
-    font-size: 24px; /* Font Awesome icon size */
-    color: #090908; /* Accent color for icons */
+.skills-card ul {
+    padding: 0;
 }
 
-.skills-card p {
-    font-size: 18px;
-    margin-bottom: 0;
-    color: #022242; /* Light text for contrast */
+.skills-card ul li {
+    list-style-type: none;
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    padding-left: 20px;
+    position: relative;
 }
+
+.skills-card ul li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745; /* Adjust color for different icons */
+}
+
 
 .background-text {
     position: absolute;
