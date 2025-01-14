@@ -11376,10 +11376,11 @@ pre .code {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start; /* Updated */
+  -webkit-justify-content: flex-start; /* Updated */
+      -ms-flex-pack: start; /* Updated */
+          justify-content: flex-start; /* Updated */
+  gap: 8px; /* Add a consistent gap between icons */
   max-width: 180px;
 }
 
